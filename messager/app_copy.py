@@ -5,11 +5,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route('/messages',  methods=['GET'])
 def messages():
-    print(ALL_TIME_MESSAGES_11)
-    return str(ALL_TIME_MESSAGES_11)
+    print(ALL_TIME_MESSAGES__)
+    return str(ALL_TIME_MESSAGES__)
 
 
 def threaded(fn):
@@ -30,11 +29,12 @@ def consuming(messages_list):
         print("ACCEPTED %r" % body)
         print('early: ', messages_list)
         messages_list.append(str(body))
-        print('Now ', messages_list)
+        print('Now', messages_list)
+
 
 if __name__ == '__main__':
-    ALL_TIME_MESSAGES_11 = []
-    consuming(ALL_TIME_MESSAGES_11)
-    print('LETS GO 1')
-    app.run(host='0.0.0.0', port=1122, debug=False)
+    ALL_TIME_MESSAGES__ = []
+    consuming(ALL_TIME_MESSAGES__)
+    print('LETS GO 2')
+    app.run(host='0.0.0.0', port=1123, debug=False)
 
