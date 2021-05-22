@@ -7,7 +7,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 messenger_service_url = (
-    "http://0.0.0.0:1122", "http://0.0.0.0:1123"
+    "http://0.0.0.0:1122/messages", "http://0.0.0.0:1123/messages"
 )
 
 
